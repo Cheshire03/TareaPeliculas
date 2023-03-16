@@ -7,9 +7,21 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
+        public string titulo{set;get;}
+        public int año{set;get;}
+        public string pais{set;get}
+        public string director{set;get}
+
         private List<Actor> actores = new List<Actor>();
 
         //Constructores
+        public static Pelicula(string titulo,int año,string pais,string director)
+        {
+            this.titulo=titulo;
+            this.año=año;
+            this.pais=pais;
+            this.director=director;
+        }
      
         //Métodos
      
@@ -25,6 +37,8 @@ namespace Pelicula
     public class Actor
     {
         //Propiedades
+        string nombre;
+        int año;
 
         //Constructores
 
@@ -45,7 +59,7 @@ namespace Pelicula
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+            Pelicula p1=new Pelicula("Pinocchio",2022,);
         }
     }
 }
