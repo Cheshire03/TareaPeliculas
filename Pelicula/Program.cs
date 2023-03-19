@@ -42,7 +42,6 @@ namespace Pelicula
         {
             actores.Add(actor);
         }
-
         public void ImprimeActores()
         {
             foreach (Actor persona in actores)
