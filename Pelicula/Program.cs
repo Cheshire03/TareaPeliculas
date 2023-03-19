@@ -15,13 +15,13 @@ namespace Pelicula
         private List<Actor> actores = new List<Actor>();
 
         //Constructores
-        /*public Pelicula(string titulo,int año,string pais,string director)
+        public Pelicula();
+
+        public Pelicula(string titulo,int año)
         {
             this.titulo=titulo;
             this.año=año;
-            this.pais=pais;
-            this.director=director;
-        }*/
+        }
      
         //Métodos
         public string GetTitulo(){return titulo;}
@@ -36,7 +36,7 @@ namespace Pelicula
 
         public void Imprime()
         {
-     //       Console.WriteLine($"{titulo} ({año})");
+            Console.WriteLine($"{titulo} ({año})");
 
         }
 
