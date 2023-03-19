@@ -15,7 +15,6 @@ namespace Pelicula
 
         //Constructores
         public Pelicula(){}
-
         public Pelicula(string titulo,int año)
         {
             this.titulo=titulo;
