@@ -7,24 +7,33 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        public string titulo{set;get;}
-        public int año{set;get;}
-        public string pais{set;get}
-        public string director{set;get}
+        public string titulo;
+        public int año;
+        public string pais;
+        public string director;
 
         private List<Actor> actores = new List<Actor>();
 
         //Constructores
-        public static Pelicula(string titulo,int año,string pais,string director)
+        /*public Pelicula(string titulo,int año,string pais,string director)
         {
             this.titulo=titulo;
             this.año=año;
             this.pais=pais;
             this.director=director;
-        }
+        }*/
      
         //Métodos
-     
+        public string GetTitulo(){return titulo;}
+        public void SetTitulo(string tit){titulo=tit;}
+
+        //public int GetAño(){return año;}
+        //public void SetAño(int año){año=this.año;}
+        //public string GetPais(){return pais;}
+        //public void SetPais(string pa){pais=pa;}
+        //public string GetDirector(){return director;}
+        //public void SetDirector(string dir){director=dir;}
+
         public void Imprime()
         {
      //       Console.WriteLine($"{titulo} ({año})");
@@ -46,7 +55,7 @@ namespace Pelicula
         //Métodos 
         public void Imprime()
         {
-            Console.WriteLine($"{Nombre} ({Año})");
+            //Console.WriteLine($"{Nombre} ({Año})");
         }
     }
 
@@ -59,7 +68,18 @@ namespace Pelicula
 
         static void Main(string[] args)
         {
-            Pelicula p1=new Pelicula("Pinocchio",2022,);
+            Pelicula p1=new Pelicula();
+            Pelicula p2=new Pelicula();
+            p1.titulo="Pinocchio";
+            p1.año=2022;
+            p1.pais="Estados Unidos";
+            p1.director="Guillermo del Toro";
+            p2.titulo="Everything Everywhere All At Once";
+            p2.año=2022;
+            p2.pais="Estados Unidos";
+            p2.director="Russo Brothers";
+            Console.WriteLine("{0} - {1}", p1.titulo, p1.año);
+            Console.WriteLine("{0} - {1}", p2.titulo, p2.año);
         }
     }
 }
