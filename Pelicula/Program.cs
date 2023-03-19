@@ -7,10 +7,10 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        public string titulo;
-        public int año;
-        public string pais;
-        public string director;
+        private string titulo;
+        private int año;
+        private string pais;
+        private string director;
 
         private List<Actor> actores = new List<Actor>();
 
@@ -27,12 +27,12 @@ namespace Pelicula
         public string GetTitulo(){return titulo;}
         public void SetTitulo(string tit){titulo=tit;}
 
-        //public int GetAño(){return año;}
-        //public void SetAño(int año){año=this.año;}
-        //public string GetPais(){return pais;}
-        //public void SetPais(string pa){pais=pa;}
-        //public string GetDirector(){return director;}
-        //public void SetDirector(string dir){director=dir;}
+        public int GetAño(){return año;}
+        public void SetAño(int añ){año=añ;}
+        public string GetPais(){return pais;}
+        public void SetPais(string pa){pais=pa;}
+        public string GetDirector(){return director;}
+        public void SetDirector(string dir){director=dir;}
 
         public void Imprime()
         {
@@ -70,7 +70,7 @@ namespace Pelicula
         {
             Pelicula p1=new Pelicula();
             Pelicula p2=new Pelicula();
-            p1.titulo="Pinocchio";
+            /*p1.titulo="Pinocchio";
             p1.año=2022;
             p1.pais="Estados Unidos";
             p1.director="Guillermo del Toro";
@@ -79,7 +79,11 @@ namespace Pelicula
             p2.pais="Estados Unidos";
             p2.director="Russo Brothers";
             Console.WriteLine("{0} - {1}", p1.titulo, p1.año);
-            Console.WriteLine("{0} - {1}", p2.titulo, p2.año);
+            Console.WriteLine("{0} - {1}", p2.titulo, p2.año);*/
+
+            p1.SetTitulo("La La Land");
+            p1.SetAño(2016);
+            Console.WriteLine("{0} ({1})", p1.GetTitulo(), p1.GetAño());
         }
     }
 }
